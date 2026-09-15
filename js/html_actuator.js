@@ -62,7 +62,18 @@ HTMLActuator.prototype.addTile = function (tile) {
   this.applyClasses(wrapper, classes);
 
   inner.classList.add("tile-inner");
-  inner.textContent = tile.value;
+
+  var value = document.createElement("span");
+  value.classList.add("tile-value");
+  value.textContent = tile.value;
+  inner.appendChild(value);
+
+  if (window.ThemeArcade) {
+    var caption = document.createElement("span");
+    caption.classList.add("tile-caption");
+    caption.textContent = window.ThemeArcade.getActive().name;
+    inner.appendChild(caption);
+  }
 
   if (tile.previousPosition) {
     // Make sure that the tile gets rendered in the previous position first

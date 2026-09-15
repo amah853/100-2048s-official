@@ -1,4 +1,12 @@
-# 2048
+# 100 2048s
+
+An image-world arcade built directly on [Gabriele Cirulli's original 2048](https://github.com/gabrielecirulli/2048) game engine. The original keyboard, swipe, merge, score, and animation code remain the foundation; this branch adds a selector for 100 worlds, real-photo tile treatments, and world-specific saved games and high scores.
+
+The theme photographs are delivered from Unsplash. Their source pages are recorded alongside the image URLs in `js/theme-arcade.js`.
+
+---
+
+# Original 2048 README
 A small clone of [1024](https://play.google.com/store/apps/details?id=com.veewo.a1024), based on [Saming's 2048](http://saming.fr/p/2048/) (also a clone). 2048 was indirectly inspired by [Threes](https://asherv.com/threes/).
 
 Made just for fun. [Play it here!](http://gabrielecirulli.github.io/2048/)

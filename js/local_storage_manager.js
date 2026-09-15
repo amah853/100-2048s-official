@@ -19,8 +19,9 @@ window.fakeStorage = {
 };
 
 function LocalStorageManager() {
-  this.bestScoreKey     = "bestScore";
-  this.gameStateKey     = "gameState";
+  var themeId = window.ThemeArcade ? window.ThemeArcade.getActiveId() : "default";
+  this.bestScoreKey     = "100-2048s-" + themeId + "-bestScore";
+  this.gameStateKey     = "100-2048s-" + themeId + "-gameState";
 
   var supported = this.localStorageSupported();
   this.storage = supported ? window.localStorage : window.fakeStorage;
