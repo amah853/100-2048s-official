@@ -29,7 +29,10 @@
   ];
 
   var worlds = worldSeeds.map(function (seed, index) {
-    return { id: "world-" + (index + 1), number: index + 1, name: seed[0], category: seed[1], accent: seed[2], image: art[seed[1]].image, credit: art[seed[1]].credit };
+    var id = "world-" + (index + 1);
+    var tiers = (window.TierImageData && window.TierImageData[id]) || [];
+    var cover = tiers[5] || tiers[0];
+    return { id: id, number: index + 1, name: seed[0], category: seed[1], accent: seed[2], image: cover ? cover.src : art[seed[1]].image, credit: cover ? cover.source : art[seed[1]].credit, tiers: tiers };
   });
   var active = worlds[0];
   var gameManager = null;
@@ -56,6 +59,29 @@
     document.getElementById("world-name").textContent = active.name;
     document.getElementById("game-intro").innerHTML = "Merge matching <strong>" + active.name + "</strong> image tiles and get to the <strong>2048 tile!</strong>";
     document.title = active.name + " 2048 — 100 2048s";
+    renderEvolution();
+  }
+
+  function renderEvolution() {
+    var strip = document.getElementById("tile-evolution");
+    if (!strip) return;
+    strip.innerHTML = "";
+    active.tiers.forEach(function (tier) {
+      var item = document.createElement("a");
+      item.className = "evolution-tile";
+      item.href = tier.source;
+      item.target = "_blank";
+      item.rel = "noreferrer";
+      item.title = tier.title + " — " + tier.license;
+      item.innerHTML = '<img src="' + tier.src + '" alt="' + tier.label + '"><span>' + tier.value + "</span>";
+      strip.appendChild(item);
+    });
+    document.getElementById("evolution-note").textContent = active.tiers.length + " real images";
+  }
+
+  function tierForValue(value) {
+    var index = Math.max(0, Math.min(active.tiers.length - 1, Math.round(Math.log(value) / Math.log(2)) - 1));
+    return active.tiers[index] || { src: active.image, label: active.name, title: active.name, source: active.credit, license: "Wikimedia Commons" };
   }
 
   function renderWorlds(query) {
@@ -102,6 +128,7 @@
   window.ThemeArcade = {
     getActive: function () { return active; },
     getActiveId: function () { return active.id; },
+    getTierForValue: tierForValue,
     attachManager: function (manager) { gameManager = manager; },
     chooseWorld: chooseWorld
   };

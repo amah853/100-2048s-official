@@ -1,8 +1,8 @@
 # 100 2048s
 
-An image-world arcade built directly on [Gabriele Cirulli's original 2048](https://github.com/gabrielecirulli/2048) game engine. The original keyboard, swipe, merge, score, and animation code remain the foundation; this branch adds a selector for 100 worlds, real-photo tile treatments, and world-specific saved games and high scores.
+An image-world arcade built directly on [Gabriele Cirulli's original 2048](https://github.com/gabrielecirulli/2048) game engine. The original keyboard, swipe, merge, score, and animation code remain the foundation; this branch adds a selector for 100 worlds, 11 image tiers per world, and world-specific saved games and high scores.
 
-The theme photographs are delivered from Unsplash. Their source pages are recorded alongside the image URLs in `js/theme-arcade.js`.
+The 1,100 tier photographs are sourced from Wikimedia Commons. Their individual source and license metadata are recorded in `js/tier-images.js`; the visible evolution preview links each image to its Commons page.
 
 ---
 

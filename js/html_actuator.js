@@ -69,9 +69,12 @@ HTMLActuator.prototype.addTile = function (tile) {
   inner.appendChild(value);
 
   if (window.ThemeArcade) {
+    var tier = window.ThemeArcade.getTierForValue(tile.value);
+    inner.style.setProperty("--tile-photo", "url(\"" + tier.src + "\")");
+    inner.setAttribute("title", tier.label + " — " + tier.title + " (" + tier.license + ")");
     var caption = document.createElement("span");
     caption.classList.add("tile-caption");
-    caption.textContent = window.ThemeArcade.getActive().name;
+    caption.textContent = tier.label;
     inner.appendChild(caption);
   }
 

@@ -26,7 +26,7 @@
       <input id="world-search" class="world-search" type="search" placeholder="Cars, raccoons, desserts…" autocomplete="off">
       <div class="world-count" id="world-count">100 worlds</div>
       <div class="world-grid" id="world-grid" aria-live="polite"></div>
-      <p class="photo-note">Photos are sourced from <a href="https://unsplash.com" target="_blank" rel="noreferrer">Unsplash</a>.</p>
+      <p class="photo-note">Every tile photo is sourced from <a href="https://commons.wikimedia.org" target="_blank" rel="noreferrer">Wikimedia Commons</a>. Preview tiles open their source and license.</p>
     </aside>
 
     <main class="play-area" id="game">
@@ -89,6 +89,11 @@
       </div>
     </div>
 
+    <section class="evolution-panel" aria-label="Tile evolution preview">
+      <div class="evolution-heading"><span>Tile evolution</span><span id="evolution-note">11 real images</span></div>
+      <div class="evolution-strip" id="tile-evolution"></div>
+    </section>
+
     <p class="game-explanation">
       <strong class="important">How to play:</strong> Use your <strong>arrow keys</strong> to move the tiles. When two tiles with the same number touch, they <strong>merge into one!</strong>
     </p>
@@ -106,6 +111,7 @@
   <script src="js/tile.js"></script>
   <script src="js/local_storage_manager.js"></script>
   <script src="js/game_manager.js"></script>
+  <script src="js/tier-images.js"></script>
   <script src="js/theme-arcade.js"></script>
   <script src="js/application.js"></script>
 </body>
