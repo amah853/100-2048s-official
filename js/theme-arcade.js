@@ -6,7 +6,7 @@
     Games: { image: "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=1200&q=85", credit: "https://unsplash.com/photos/adc38448a05e" },
     Visuals: { image: "https://images.unsplash.com/photo-1541701494587-cb58502866ab?auto=format&fit=crop&w=1200&q=85", credit: "https://unsplash.com/photos/cb58502866ab" },
     Animals: { image: "https://images.unsplash.com/photo-1600010649263-68feafeeb74f?auto=format&fit=crop&w=1200&q=85", credit: "https://unsplash.com/photos/68feafeeb74f" },
-    Chaos: { image: "https://images.unsplash.com/photo-1519608487953-e999c86e745?auto=format&fit=crop&w=1200&q=85", credit: "https://unsplash.com/photos/e999c86e745" },
+    Chaos: { image: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=85", credit: "https://unsplash.com/photos/b586d89ba3ee" },
     Science: { image: "https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?auto=format&fit=crop&w=1200&q=85", credit: "https://unsplash.com/photos/b23d57bd21aa" },
     Tech: { image: "https://images.unsplash.com/photo-1535378917042-10a22c95931a?auto=format&fit=crop&w=1200&q=85", credit: "https://unsplash.com/photos/10a22c95931a" },
     Sports: { image: "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=1200&q=85", credit: "https://unsplash.com/photos/ffe607ba8211" },
